@@ -14,7 +14,6 @@ This project will help you practice the skills and concepts you learned related 
 3. Add a button to the main screen
 4. Make the button's text "Create Contact"
 5. Add a scroll view with a linear layout child to the screen.
-6. Use the Add Missing Constraints option to make sure everything is properly constrained
 
 ### Create Listeners
 
@@ -33,13 +32,14 @@ This project will help you practice the skills and concepts you learned related 
 1. Create a new file called "ContactsManager.java"
 2. Create a class called `ContactsManager`
 3. It should contain a variable array property called `contacts` whose type is an ArrayList of `Contact` objects
-4. Add a method called `Contact createContact(String name, String phoneNumber)`. It should create a new instance of `Contact`, add it to the `contacts` ArrayList, and return it.
+4. Add a method called `Contact createContact(String name, String phoneNumber)`. It should create a new instance of `Contact`, and add it to the `contacts` ArrayList.
 5. In `MainActivity.java`, add a data member called `contactsManager` instantiate and assign an instance of `ContactsManager` to it (`ContactsManager contactsManager = new ContactsManager()`)
 
 ### Implement The User Interface
 
 1. In the action for the "Create Contact" button, get the strings entered in the text field.
 2. Use these strings to call the contacts manager's `createContact()` method.
+3. Write a method that will generate and return a `TextView` that accepts a `String` as the text value.  
 3. Refresh the the text view by adding the new contact as a new text view to your linear layout view.
 4. Every contact from the array should be in this list
 
