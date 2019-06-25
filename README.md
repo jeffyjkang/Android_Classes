@@ -1,4 +1,4 @@
-# Android_Classes
+# Android Classes
 
 This project will help you practice the skills and concepts you learned related to structs and classes in Java. For this project you'll build an app that is a basic contacts manager app. It will allow you to save and view contact information for your friends.
 
@@ -17,23 +17,27 @@ This project will help you practice the skills and concepts you learned related 
 
 ### Create Listeners
 
-1. Create an even listener for the button in MainActivity.java
-2. Create data members for all other widgets MainActivity.java
+1. Create an even listener for the button in MainActivity.kt
+2. Create data members for all other widgets MainActivity.kt
 
 ### Write a Contact class
 
-1. Create a new file called "Contact.java"
+1. Create a new file called "Contact.kt"
 2. Create a class called `Contact`
-3. Add `String name` and `String phoneNumber` properties.
+3. Add `name` and `phoneNumber` properties to the signature, both are `String` objects.
 4. Write an constructor that takes `name` and `phoneNumber` as arguments and initializes the corresponding properties using `this.` syntax.
+5. Write a property called `display` with a getter that combines the `name` and `phoneNumber` and returns it
 
 ### Write A Contacts Manager class
 
-1. Create a new file called "ContactsManager.java"
+1. Create a new file called "ContactsManager.kt"
 2. Create a class called `ContactsManager`
-3. It should contain a variable array property called `contacts` whose type is an ArrayList of `Contact` objects
-4. Add a method called `Contact createContact(String name, String phoneNumber)`. It should create a new instance of `Contact`, and add it to the `contacts` ArrayList.
-5. In `MainActivity.java`, add a data member called `contactsManager` instantiate and assign an instance of `ContactsManager` to it (`ContactsManager contactsManager = new ContactsManager()`)
+3. It should contain a property called `contacts` whose type is `MutableList<Contact>`
+> this property should be in the primary constructor definition and can be given a default value of a new empty list
+
+4. Add a method with the signature `fun createContact(name: String, phone: String)`. It should create a new instance of `Contact`, and add it to the `contacts` ArrayList.
+5. In `MainActivity.kt`, add a data member called `contactsManager` instantiate and assign an instance of `ContactsManager` to it
+> `val contactsManager = ContactsManager()` can do this
 
 ### Implement The User Interface
 
